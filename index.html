@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명수의 포트폴리오</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            /*border: 1px solid #ccc;*/
+        }
 
-    </head>
-    <body>
-        여기로 가세요.<a href="test2.html">Click</a>
-    </body>
+        .container > .column {
+            margin-right: 50px; /* 간격 설정 */
+        }
+
+        /* 마지막 컨테이너의 마진 제거 */
+        .container > .column:last-child {
+            margin-right: 0;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        a{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <!-- 첫 번째 등분 -->
+            <h2>자기소개</h2>
+            <a href="self_introduction.html">클릭!</a>
+        </div>
+        <div class="column">
+            <!-- 두 번째 등분 -->
+            <h2>프로젝트</h2>
+            <p>이 영역에 두 번째 등분의 내용을 작성하세요.</p>
+        </div>
+        <div class="column">
+            <!-- 세 번째 등분 -->
+            <h2>향후 계획</h2>
+            <p>이 영역에 세 번째 등분의 내용을 작성하세요.</p>
+        </div>
+    </div>
+</body>
 </html>
