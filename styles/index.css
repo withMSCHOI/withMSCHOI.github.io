@@ -1,0 +1,55 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+body{
+    background-image: url('images/자기소개.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 20vw;
+    height: 100px;
+    background-color: lightgray;
+    margin: 5vw;
+    display: inline-block;
+    border: 2px solid ghostwhite;
+    border-radius: 20px 50px 20px 50px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 15vh;
+    /*
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 15vh;
+    */
+}
+
+footer {
+    background-color: gray; 
+    color: white; 
+    text-align: left; 
+    padding: 20px 20px;
+    position: fixed; 
+    width: 95%; 
+    bottom: 0;
+    border-radius: 50px;
+}
+
+img {
+
+}

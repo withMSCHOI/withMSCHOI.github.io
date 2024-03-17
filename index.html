@@ -1,62 +1,74 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>명수의 포트폴리오</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center; /* 수평 가운데 정렬 */
-            align-items: center; /* 수직 가운데 정렬 */
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-        }
-        .column {
-            flex: 1;
-            padding: 10px;
-            /*border: 1px solid #ccc;*/
-        }
+    <html lang="ko">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>명수의 포트폴리오</title>
+            <style>
+                 body {
+                    margin: 0;
+                    padding: 0;
+                    background-image: url('images/자기소개.jpg');
+                    background-size: cover; 
+                    background-position: top center;
+                    font-family: Arial, sans-serif;
+                }
 
-        .container > .column {
-            margin-right: 50px; /* 간격 설정 */
-        }
+                .self-introduce {
+                    width: 150px;
+                    height: 50px;
+                    margin: 40px;
+                    padding: 20px;  
+                    text-align: center;
+                    color: #fff; 
+                    border-radius: 50%;
+                    border: 5px double black;
+                    position: absolute;
+                    right: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-        /* 마지막 컨테이너의 마진 제거 */
-        .container > .column:last-child {
-            margin-right: 0;
-        }
+                h1 {
+                    text-align: center;
+                    color: white;
+                    font-size: 3em; 
+                    text-shadow:  
+                    -1px -1px 0 black,  
+                    1px -1px 0 black,
+                    -1px  1px 0 black,
+                    1px  1px 0 black;
+                }
 
-        h2{
-            text-align: center;
-        }
+                h2{
+                    font-size: 2em;
+                    color: black;
+                    text-shadow: 
+                    -1px -1px 0 white,  
+                    1px -1px 0 white,
+                    -1px  1px 0 white,
+                    1px  1px 0 white;
+                }
 
-        a{
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="column">
-            <!-- 첫 번째 등분 -->
-            <h2>자기소개</h2>
-            <a href="self_introduction.html">클릭!</a>
-        </div>
-        <div class="column">
-            <!-- 두 번째 등분 -->
-            <h2>프로젝트</h2>
-            <p>이 영역에 두 번째 등분의 내용을 작성하세요.</p>
-        </div>
-        <div class="column">
-            <!-- 세 번째 등분 -->
-            <h2>향후 계획</h2>
-            <p>이 영역에 세 번째 등분의 내용을 작성하세요.</p>
-        </div>
-    </div>
-</body>
-</html>
+                p {
+                    font-size: 1.5em; /* 단락 크기 */
+                }
+
+                a{
+                    color: white;
+                }
+
+            </style>
+        </head>
+        <body>
+            <br>
+            <h1>명수의 포트폴리오</h1>
+            <div class="self-introduce">
+                <a href="self_introduction.html">
+                <h2>자기소개</h2>
+                </a>
+                <p></p>
+            </div>
+        </body>
+    </html>
