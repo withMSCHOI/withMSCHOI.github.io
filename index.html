@@ -8,38 +8,59 @@
             padding: 0;
             margin: 0;
         }
-        .header-text {
-            position: relative; 
+        header {
+            display: flex;
+            align-items: center;
         }
-        .front-text {
-            position: absolute;
-            top: 30px;
-            left: 20px;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            -webkit-text-stroke: 1px black;
+        .log-link {
+            width: 20%;
+            margin-top: 30px;
+            margin-left: 50px;
         }
-        .behind-text {
-            position: absolute;
-            top: 8px;
-            left: 50px;
-            font-size: 60px;
-            color: darkgray;
-            z-index: -1;
+        a img {
+            width: 100%;
+            height: auto;
         }
+
+        nav {
+            margin-top: 75px;
+            
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav li {
+            display: inline-block;
+            font-size: 24px;
+        }
+        nav li a {
+            padding: 5px 60px;
+            color: black;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            border: 3px outset green;
+            border-radius: 20px;
+            background: whitesmoke;
+        }
+        
     </style>
 </head>
 <body>
     <header>
-        <div class="header-text">
-            <h1 class="front-text">PORTFOLIO</h1>
-            <h2 class="behind-text">MS</h2>
-        </div>
+        <a href="index.html" class="log-link"><img src="images/logo.png" alt="image"></a>
+        <nav>
+            <ul>
+                <li><a href="">소개</a></li>
+                <li><a href="">프로젝트</a></li>
+                <li><a href="">자격증</a></li>
+                <li><a href="">공인영어</a></li>
+                <li><a href="">대회</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-
-    </nav>
+    <br>
+    <hr>
     <section>
 
     </section>
