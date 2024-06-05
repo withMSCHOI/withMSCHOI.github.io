@@ -1,62 +1,79 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyengSu's Portfolio</title>
-    <link href="header.css" rel="stylesheet">
+    <title>Start Page</title>
+    <link href="https://fonts.googleapis.com/css?family= Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hi+Melody&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         section {
             display: flex;
-            border: 1px solid black;
-            margin: 50px 100px;
-            background: white;
-            padding: 5px 0;
+            width: 90%;
+            height: 90%;
+            margin: 3% auto;
+            border: 5px double black;
             border-radius: 10px;
         }
-        section img {
-            width: 15%;
-            height: 250px;
-            margin-left: 90px;
-            margin-top: 10px;
+
+        .portfolio {
+            width: 50%;
         }
-        .introduce {
-            margin-top: 10px;
-            margin-left: 70px;
+        .portfolio h1 {
+            text-align: center;
+            font-family: 'Bowlby one SC', cursive;
+            font-size: 60px;
+            margin-top: 70%;
         }
+        .index {
+            width: 50%;
+        }
+        .index ul {
+            list-style: none;
+        }
+        .index a {
+            display: block;
+            text-align: center;
+            padding: 5%;
+            margin-top: 5%;
+            margin-right: 1%;
+            font-size: 30px;
+            font-family: 'Hi Melody';
+            font-weight: bolder;
+            text-decoration: none;
+            color: black;
+            border: 3px solid orange;
+            border-radius: 10px;
+        }
+        .index a:hover {
+            text-align: start;
+        }
+       
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="log-link"><img src="images/logo.png" alt="image"></a>
-        <nav>
-            <ul>
-                <li><a href="">소개</a></li>
-                <li><a href="">프로젝트</a>
-                    <ul>
-                        <li><a href="">메인 프로젝트</a></li>
-                        <li><a href="university_Project.html">대학교 프로젝트</a></li>
-                        <li><a href="">동아리 프로젝트</a></li>
-                        <li><a href="">개인 프로젝트</a></li>
-                    </ul>
-                </li>
-                <li><a href="">자격증</a></li>
-                <li><a href="">공인영어</a></li>
-                <li><a href="">대회</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <hr>
     <section>
-        <img src="images/face-picture.jpg" alt="얼굴 사진">
-        <div class="introduce">
-            <h1>최 명 수</h1><br>
-            <p>안녕하세요. 저는</p>
+        <div class="portfolio">
+            <div>
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="index">
+            <div>
+                <ul>
+                    <li><a href="">자기소개</a></li>
+                    <li><a href="">학부 활동</a></li>
+                    <li><a href="">동아리 활동</a></li>
+                    <li><a href="">공인영어 및 자격증</a></li>
+                </ul>
+            </div>
         </div>
     </section>
-    <footer>
-
-    </footer>
 </body>
 </html>
