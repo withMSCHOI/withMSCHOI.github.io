@@ -20,6 +20,7 @@
             margin: 3% auto;
             border: 5px double black;
             border-radius: 10px;
+            border-right: none;
         }
 
         .portfolio {
@@ -39,6 +40,7 @@
         }
         .index a {
             display: block;
+            width: 90%;
             text-align: center;
             padding: 5%;
             margin-top: 5%;
@@ -50,9 +52,22 @@
             color: black;
             border: 3px solid orange;
             border-radius: 10px;
+            position: relative;
         }
         .index a:hover {
             text-align: start;
+            width: 32%;
+        }
+        .index a .hover-text {
+            visibility: hidden;
+            position: absolute;
+            left: 100%;
+            white-space: nowrap;
+            color: orange;
+            margin-left: 5%;
+        }
+        .index a:hover .hover-text {
+            visibility: visible;
         }
        
     </style>
@@ -67,10 +82,10 @@
         <div class="index">
             <div>
                 <ul>
-                    <li><a href="">자기소개</a></li>
-                    <li><a href="">학부 활동</a></li>
-                    <li><a href="">동아리 활동</a></li>
-                    <li><a href="">공인영어 및 자격증</a></li>
+                    <li><a href="">자기소개 <span class="hover-text">저의 열정, 궁금하지 않으세요?</span> </a></li>
+                    <li><a href="">학부 활동 <span class="hover-text">대학생 시절 프로젝트를 보여드릴게요!</span> </a></li>
+                    <li><a href="">동아리 활동 <span class="hover-text">데이터 분석 프로젝트를 보여드릴게요!</span> </a></li>
+                    <li><a href="">공인영어 및 자격증 <span class="hover-text">영어 잘하고 싶어요ㅠ.ㅠ</span> </a></li>
                 </ul>
             </div>
         </div>
