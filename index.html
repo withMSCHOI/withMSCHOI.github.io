@@ -5,75 +5,165 @@
     <title>Start Page</title>
     <link href="https://fonts.googleapis.com/css?family= Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hi+Melody&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hi+Melody&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        @media only screen and (min-width: 501px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                display: flex;
+                width: 90%;
+                height: 90%;
+                margin: 2% auto;
+                border: 5px double black;
+                border-radius: 10px;
+                border-right: none;
+            }
+
+            .portfolio {
+                width: 50%;
+            }
+            .portfolio h1 {
+                text-align: center;
+                font-family: 'Bowlby one SC', cursive;
+                font-size: 60px;
+                margin-top: 70%;
+            }
+            .index {
+                width: 50%;
+            }
+            .index p {
+                display: none;
+            }
+            .index ul {
+                list-style: none;
+            }
+            .index a {
+                display: block;
+                width: 90%;
+                height: 3%;
+                text-align: center;
+                padding: 5%;
+                margin-top: 5%;
+                margin-right: 1%;
+                font-size: 30px;
+                font-family: 'Hi Melody';
+                font-weight: bolder;
+                text-decoration: none;
+                color: black;
+                border: 3px solid orange;
+                border-radius: 10px;
+                position: relative;
+            }
+            .index a:hover {
+                text-align: start;
+                width: 32%;
+            }
+            .index a .hover-text {
+                visibility: hidden;
+                position: absolute;
+                left: 100%;
+                white-space: nowrap;
+                color: orange;
+                margin-left: 5%;
+            }
+            .index a:hover .hover-text {
+                visibility: visible;
+            }
+        
+            .train {
+                position: absolute;
+                width: 10px;
+                height: 50px;
+                background-color: orange;
+                border-radius: 10px;
+                animation: moveTrain 10s linear infinite;
+                opacity: 0;
+            }
+            .train.delay {
+                animation-delay: 1s;
+            }
+            .train.delay2 {
+                animation-delay: 2s;
+            }
+            .train.delay3 {
+                animation-delay: 3s;
+            }
+            .train.delay4 {
+                animation-delay: 4s;
+            }
+
+            @keyframes moveTrain {
+                0% {
+                    top: 30px;
+                    opacity: 0;
+                }
+                50% {
+                    top: calc(100% - 90px);
+                    opacity: 1;
+                }
+                100% {
+                    top: 30px;
+                    opacity: 0;
+                }
+            }
         }
 
-        section {
-            display: flex;
-            width: 90%;
-            height: 90%;
-            margin: 3% auto;
-            border: 5px double black;
-            border-radius: 10px;
-            border-right: none;
+        @media only screen and (max-width: 500px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .portfolio h1 {
+                text-align: center;
+                font-family: 'Bowlby one SC', cursive;
+                font-size: 25px;
+            }
+            .index {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .index ul {
+                width: 100%;
+                list-style: none;
+            }
+            .index a {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                font-family: 'Hi Melody';
+                font-weight: bolder;
+                text-decoration: none;
+                color: black;
+                border: 3px solid orange;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .index a .hover-text {
+                display: none;
+            }
+            .index p {
+                font-size: 10px;
+                text-align: center;
+                color: orange;
+                font-family: 'Hi Melody';
+                font-weight: bolder;
+            }
         }
-
-        .portfolio {
-            width: 50%;
-        }
-        .portfolio h1 {
-            text-align: center;
-            font-family: 'Bowlby one SC', cursive;
-            font-size: 60px;
-            margin-top: 70%;
-        }
-        .index {
-            width: 50%;
-        }
-        .index ul {
-            list-style: none;
-        }
-        .index a {
-            display: block;
-            width: 90%;
-            text-align: center;
-            padding: 5%;
-            margin-top: 5%;
-            margin-right: 1%;
-            font-size: 30px;
-            font-family: 'Hi Melody';
-            font-weight: bolder;
-            text-decoration: none;
-            color: black;
-            border: 3px solid orange;
-            border-radius: 10px;
-            position: relative;
-        }
-        .index a:hover {
-            text-align: start;
-            width: 32%;
-        }
-        .index a .hover-text {
-            visibility: hidden;
-            position: absolute;
-            left: 100%;
-            white-space: nowrap;
-            color: orange;
-            margin-left: 5%;
-        }
-        .index a:hover .hover-text {
-            visibility: visible;
-        }
-       
     </style>
 </head>
 <body>
     <section>
+        <div class="train"></div>
+        <div class="train delay"></div>
+        <div class="train delay2"></div>
+        <div class="train delay3"></div>
+        <div class="train delay4"></div>
+
         <div class="portfolio">
             <div>
                 <h1>PORTFOLIO</h1>
@@ -82,10 +172,26 @@
         <div class="index">
             <div>
                 <ul>
-                    <li><a href="">자기소개 <span class="hover-text">저의 열정, 궁금하지 않으세요?</span> </a></li>
+                    <li><a href="indtroduction.html">자기소개 <span class="hover-text">저의 열정, 궁금하지 않으세요?</span> </a></li>
+                    <p>↺</p>
+                    <p>저의 열정, 궁금하지 않으세요?</p>
+                    <br>
                     <li><a href="">학부 활동 <span class="hover-text">대학생 시절 프로젝트를 보여드릴게요!</span> </a></li>
+                    <p>↺</p>
+                    <p>대학생 시절 프로젝트를 보여드릴게요!</p>
+                    <br>
                     <li><a href="">동아리 활동 <span class="hover-text">데이터 분석 프로젝트를 보여드릴게요!</span> </a></li>
+                    <p>↺</p>
+                    <p>데이터 분석 프로젝트를 보여드릴게요!</p>
+                    <br>
+                    <li><a href="">개인 활동 <span class="hover-text">방학 때 쉬지만은 않았어요!</span> </a></li>
+                    <p>↺</p>
+                    <p>방학 때 쉬지만은 않았어요!</p>
+                    <br>
                     <li><a href="">공인영어 및 자격증 <span class="hover-text">영어 잘하고 싶어요ㅠ.ㅠ</span> </a></li>
+                    <p>↺</p>
+                    <p>영어 잘하고 싶어요ㅠ.ㅠ</p>
+                    <br>
                 </ul>
             </div>
         </div>
